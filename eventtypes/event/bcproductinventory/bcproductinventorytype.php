@@ -42,7 +42,7 @@ class BCProductInventoryType extends eZWorkflowEventType
     function __construct()
     {
         parent::__construct( BCProductInventoryType::WORKFLOW_TYPE_STRING, ezpI18n::tr( 'kernel/workflow/event', "Remove From Inventory" ) );
-        $this->setTriggerTypes( array( 'shop' => array( 'confirmorder' => array ( 'before' ) ) ) );
+        $this->setTriggerTypes( array( 'shop' => array( 'checkout' => array ( 'after' ) ) ) );
     }
 
     function execute( &$process, &$event )
